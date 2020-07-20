@@ -10,10 +10,63 @@ fi
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export HISTCONTROL=ignoreboth:erasedups
+export TERM="xterm-256color"              # getting proper colors
+export HISTCONTROL=ignoredups:erasedups   # no duplicate entries
+export ALTERNATE_EDITOR=""                # setting for emacsclient
+#export EDITOR="emacsclient -t -a ''"      # $EDITOR use Emacs in terminal
+#export VISUAL="emacsclient -c -a emacs"   # $VISUAL use Emacs in GUI mode
 
-PS1='[\u@\h \W]\$ '
 
+#Prompt
+#PS1='[\u@\h \W]\$ '
+
+# Set colorful PS1 only on colorful terminals.
+# dircolors --print-database uses its own built-in database
+# instead of using /etc/DIR_COLORS.  Try to use the external file
+# first to take advantage of user additions.  Use internal bash
+# globbing instead of external grep binary.
+use_color=true
+safe_term=${TERM//[^[:alnum:]]/?}   # sanitize TERM
+match_lhs=""
+[[ -f ~/.dir_colors   ]] && match_lhs="${match_lhs}$(<~/.dir_colors)"
+[[ -f /etc/DIR_COLORS ]] && match_lhs="${match_lhs}$(</etc/DIR_COLORS)"
+[[ -z ${match_lhs}    ]] \
+  && type -P dircolors >/dev/null \
+  && match_lhs=$(dircolors --print-database)
+[[ $'\n'${match_lhs} == *$'\n'"TERM "${safe_term}* ]] && use_color=true
+
+if ${use_color} ; then
+  # Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
+  if type -P dircolors >/dev/null ; then
+    if [[ -f ~/.dir_colors ]] ; then
+      eval $(dircolors -b ~/.dir_colors)
+    elif [[ -f /etc/DIR_COLORS ]] ; then
+      eval $(dircolors -b /etc/DIR_COLORS)
+    fi
+  fi
+
+  if [[ ${EUID} == 0 ]] ; then
+    PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
+  else
+    PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
+  fi
+
+    grep='grep --colour=auto' \
+    egrep='egrep --colour=auto' \
+    fgrep='fgrep --colour=auto'
+else
+  if [[ ${EUID} == 0 ]] ; then
+    # show root@ when we don't have colors
+    PS1='\u@\h \W \$ '
+  else
+    PS1='\u@\h \w \$ '
+  fi
+fi
+
+unset use_color safe_term match_lhs sh
+
+
+#Import dirs
 if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
 fi
