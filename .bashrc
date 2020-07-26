@@ -175,5 +175,7 @@ export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=8 nomo
 #create a file called .bashrc-personal and put all your personal aliases
 #in there. They will not be overwritten by skel.
 
+[[ -f ~/.bin/powerline/bash/powerline.sh ]] && . ~/.bin/powerline/bash/powerline.sh
+
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
