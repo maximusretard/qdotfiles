@@ -76,7 +76,7 @@ if [ -d "$HOME/.local/bin" ] ;
 fi
 
 #git config
-alias dotfiles='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 #list
 #alias ls='ls --color=auto'
@@ -170,7 +170,8 @@ ex ()
 }
 
 ### SET VIM AS MANPAGER ###
-export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=8 nomod nolist noma' -\""
+#export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=8 nomod nolist noma' -\""
+export MANPAGER="nvim -c 'set ft=man' -"
 
 #create a file called .bashrc-personal and put all your personal aliases
 #in there. They will not be overwritten by skel.
