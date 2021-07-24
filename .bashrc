@@ -76,7 +76,7 @@ if [ -d "$HOME/.local/bin" ] ;
 fi
 
 #git config
-alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias dotfiles='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 #list
 #alias ls='ls --color=auto'
