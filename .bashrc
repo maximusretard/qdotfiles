@@ -176,7 +176,7 @@ export MANPAGER="nvim -c 'set ft=man' -"
 #create a file called .bashrc-personal and put all your personal aliases
 #in there. They will not be overwritten by skel.
 
-[[ -f ~/.bin/powerline/bash/powerline.sh ]] && . ~/.bin/powerline/bash/powerline.sh
+[[ -f ~/.local/bin/powerline/bash/powerline.sh ]] && . ~/.local/bin/powerline/bash/powerline.sh
 
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
