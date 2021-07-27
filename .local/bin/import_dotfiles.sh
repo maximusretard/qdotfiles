@@ -11,6 +11,7 @@ sudo unzip SourceCodePro.zip -d ~/.local/share/fonts/saucecodepro
 sudo unzip InconsolataGo.zip -d ~/.local/share/fonts/inconsolatago
 
 #get dotfiles
+cd ~/
 git clone --bare https://github.com/maximusretard/qdotfiles.git $HOME/.dotfiles
 function dotfiles {
    /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" "$@"
