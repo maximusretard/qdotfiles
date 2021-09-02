@@ -179,10 +179,13 @@ ex ()
 #export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=8 nomod nolist noma' -\""
 export MANPAGER="nvim -c 'set ft=man' -"
 
-#create a file called .bashrc-personal and put all your personal aliases
-#in there. They will not be overwritten by skel.
+if [[ -f /usr/share/powerline/bash/powerline.sh ]]; then
+	#powerline-daemon -q
+	#POWERLINE_BASH_CONTINUATION=1
+	#POWERLINE_BASH_SELECT=1
+	. /usr/share/powerline/bash/powerline.sh
+fi
 
-[[ -f ~/.local/bin/powerline/bash/powerline.sh ]] && . ~/.local/bin/powerline/bash/powerline.sh
-
+#custom rc, not in version control
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
