@@ -12,10 +12,12 @@ fi
 
 export TERM="xterm-256color"              # getting proper colors
 export HISTCONTROL=ignoredups:erasedups   # no duplicate entries
+export HISTSIZE=100000                    # large history
+export HISTFILESIZE=100000                # large history
 export ALTERNATE_EDITOR=""                # setting for emacsclient
 #export EDITOR="emacsclient -t -a ''"      # $EDITOR use Emacs in terminal
 #export VISUAL="emacsclient -c -a emacs"   # $VISUAL use Emacs in GUI mode
-
+PROMPT_COMMAND='history -a'
 
 #Prompt
 #PS1='[\u@\h \W]\$ '
@@ -122,6 +124,10 @@ alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 
 #add new fonts
 alias update-fc='sudo fc-cache -fv'
+
+#editor
+alias vi='nvim'
+alias vim='nvim'
 
 #switch between bash and zsh
 #alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
