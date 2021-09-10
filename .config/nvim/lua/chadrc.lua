@@ -1,5 +1,9 @@
 -- IMPORTANT NOTE : This is the user config, can be edited. Will be preserved if updated with internal updater
 
+-- set to bash to fix 'ioctl' error with fish when running terminal commands
+vim.cmd('set shell=/usr/bin/bash')
+
+
 local M = {}
 M.ui, M.options, M.plugin_status, M.mappings, M.custom = {}, {}, {}, {}, {}
 
