@@ -17,4 +17,5 @@ else
   #option 2 - from github.com
   tag=$(curl -s https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")')
   wget "https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/${tag}/php-cs-fixer.phar" -O ~/.local/bin/php-cs-fixer
+  chmod u+x ~/.local/bin/php-cs-fixer
 fi
