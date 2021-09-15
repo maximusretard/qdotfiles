@@ -5,7 +5,7 @@ npm config set prefix ~/.local
 npm install -g prettier
 
 #black [python]
-pip install black
+pip3 install black
 
 #php-cs-fixer
 if [ -f ~/.local/bin/php-cs-fixer ]; then
@@ -19,3 +19,10 @@ else
   wget "https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/${tag}/php-cs-fixer.phar" -O ~/.local/bin/php-cs-fixer
   chmod u+x ~/.local/bin/php-cs-fixer
 fi
+
+#Taskwiki requirements
+pip3 install six
+pip3 install pynvim
+pip3 install tasklib
+#temp tasklib fix https://github.com/GothenburgBitFactory/tasklib/pull/98
+sed -i 's/^local_zone = tzlocal.get_localzone()/local_zone = pytz.timezone(str(tzlocal.get_localzone()))/g' ~/.local/lib/python3.9/site-packages/tasklib/serializing.py
