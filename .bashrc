@@ -88,10 +88,10 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 #alias l.="ls -A | egrep '^\.'"
 
 # Changing "ls" to "exa"
-alias ls='exa -al --color=always --group-directories-first' # my preferred listing
+alias ls='exa -alhg --color=always --group-directories-first' # my preferred listing
 alias l=ls
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first'  # long format
+alias ll='exa -lg --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 
 #fix obvious typo's
