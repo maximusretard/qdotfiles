@@ -1,3 +1,47 @@
 {
-    "workbench.colorTheme": "Monokai Dimmed"
+    "workbench.colorTheme": "Dracula Soft",
+    "breadcrumbs.enabled": true,
+    "css.validate": true,
+    "editor.fontFamily": "Sauce Code Pro, Audiowide, Hasklig, Overpass Mono, monospace",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modifications",
+    "editor.matchBrackets": false,
+    "editor.rulers": [
+        100
+    ],
+    "editor.tabSize": 4,
+    "editor.folding": false,
+    "files.trimFinalNewlines": true,
+    "git.allowForcePush": true,
+    "git.confirmForcePush": true,
+    "telemetry.enableTelemetry": false,
+    "terminal.integrated.scrollback": 50000,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "workbench.startupEditor": "readme",
+    "subtleBrackets.pairs": [
+        {
+            "open": "(",
+            "close": ")"
+        },
+        {
+            "open": "[",
+            "close": "]"
+        },
+        {
+            "open": "{",
+            "close": "}"
+        },
+        {
+            "open": "<",
+            "close": ">"
+        }
+    ],
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "files.autoSave": "onWindowChange",
+    "telemetry.telemetryLevel": "off",
+    "window.menuBarVisibility": "visible",
+    "editor.lineNumbers": "off",
+    "editor.minimap.enabled": false
 }
