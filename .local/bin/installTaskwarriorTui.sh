@@ -6,5 +6,6 @@ wget "https://github.com/kdheepak/taskwarrior-tui/releases/download/${tag}/taskw
 mkdir -p ~/.local/share/taskwarrior-tui
 tar -xzf taskwarrior-tui-x86_64-unknown-linux-gnu.tar.gz -C ~/.local/share/taskwarrior-tui taskwarrior-tui
 rm -f taskwarrior-tui-x86_64-unknown-linux-gnu.tar.gz
+rm -f ~/.local/bin/tt
 ln -s ~/.local/share/taskwarrior-tui/taskwarrior-tui ~/.local/bin/tt
 
