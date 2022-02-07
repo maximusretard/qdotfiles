@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+code --install-extension actboy168.tasks
 code --install-extension bmewburn.vscode-intelephense-client
 code --install-extension bungcip.better-toml
 code --install-extension dnlytras.nord-wave
@@ -25,6 +26,7 @@ code --install-extension rafamel.subtle-brackets
 code --install-extension serayuzgur.crates
 code --install-extension sidp.strict-whitespace
 code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension svelte.svelte-vscode
 code --install-extension Swellaby.vscode-rust-test-adapter
 code --install-extension usernamehw.errorlens
 code --install-extension vadimcn.vscode-lldb

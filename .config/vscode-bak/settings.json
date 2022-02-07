@@ -37,11 +37,35 @@
             "close": ">"
         }
     ],
-    "gitlens.currentLine.enabled": false,
+    "subtleBrackets.style": {
+        "borderColor": "yellow",
+        "borderWidth": "1px",
+        "borderStyle": "solid"
+    },
     "gitlens.hovers.currentLine.over": "line",
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
     "files.autoSave": "onWindowChange",
     "telemetry.telemetryLevel": "off",
     "window.menuBarVisibility": "visible",
-    "editor.lineNumbers": "off",
-    "editor.minimap.enabled": false
+    "editor.formatOnSaveMode": "modifications",
+    "editor.minimap.enabled": true,
+    "svelte.enable-ts-plugin": true,
+    "editor.lineNumbers": "on",
+    "workbench.tree.indent": 26,
+    "workbench.tree.renderIndentGuides": "always",
+    "explorer.openEditors.visible": 0,
+    "breadcrumbs.enabled": true,
+    "telemetry.enableTelemetry": false,
+    "editor.matchBrackets": false,
+    "workbench.editor.showTabs": false,
+    "rust-analyzer.checkOnSave.enable": true,
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "stash-push:command",
+        "switch:command",
+        "branch-create:command"
+    ] 
 }
