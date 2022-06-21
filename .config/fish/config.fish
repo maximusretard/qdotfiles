@@ -172,6 +172,16 @@ if test -f "/usr/share/powerline/fish/powerline-setup.fish"
 	powerline-setup
 end
 
+# Copy w/ progress
+function cp_p --argument src --argument dst --description "Copy files with progress indicator"
+  rsync -WavP --human-readable --progress $src $dst
+end
+
+# Dig w/ all info
+function digall --argument domain --description "Dig with all the info"
+  dig +nocmd $domain any +multiline +noall +answer
+end
+
 #custom rc, not in version control
 if test -f ~/.fishrc-personal
 	. ~/.fishrc-personal
