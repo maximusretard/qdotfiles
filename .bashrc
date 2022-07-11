@@ -15,8 +15,8 @@ export HISTCONTROL=ignoredups:erasedups   # no duplicate entries
 export HISTSIZE=100000                    # large history
 export HISTFILESIZE=100000                # large history
 export ALTERNATE_EDITOR=""                # setting for emacsclient
-#export EDITOR="emacsclient -t -a ''"      # $EDITOR use Emacs in terminal
-#export VISUAL="emacsclient -c -a emacs"   # $VISUAL use Emacs in GUI mode
+export EDITOR="nvim"
+export VISUAL="nvim"
 PROMPT_COMMAND='history -a'
 
 #Prompt
@@ -88,10 +88,10 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 #alias l.="ls -A | egrep '^\.'"
 
 # Changing "ls" to "exa"
-alias ls='exa -al --color=always --group-directories-first' # my preferred listing
+alias ls='exa -alhg --color=always --group-directories-first' # my preferred listing
 alias l=ls
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first'  # long format
+alias ll='exa -lg --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 
 #fix obvious typo's
@@ -126,6 +126,7 @@ alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias update-fc='sudo fc-cache -fv'
 
 #editor
+alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 

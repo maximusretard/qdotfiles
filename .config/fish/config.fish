@@ -20,10 +20,10 @@ set HISTFILESIZE "100000"                # large history
 #set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 ### "vim" as manpager
-set -x MANPAGER '/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
+#set -x MANPAGER '/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 
 ### "nvim" as manpager
-# set -x MANPAGER "nvim -c 'set ft=man' -"
+set -x MANPAGER "nvim -c 'set ft=man' -"
 
 ### SET EITHER DEFAULT EMACS MODE OR VI MODE ###
 function fish_user_key_bindings
@@ -115,9 +115,9 @@ alias vi='nvim'
 alias vim='nvim'
 
 # Changing "ls" to "exa"
-alias ls='exa -alh --color=always --group-directories-first' # my preferred listing
+alias ls='exa -alhg --color=always --group-directories-first' # my preferred listing
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first'  # long format
+alias ll='exa -lg --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
 
@@ -170,6 +170,16 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 if test -f "/usr/share/powerline/fish/powerline-setup.fish"
 	set fish_function_path $fish_function_path "/usr/share/powerline/fish"
 	powerline-setup
+end
+
+# Copy w/ progress
+function cp_p --argument src --argument dst --description "Copy files with progress indicator"
+  rsync -WavP --human-readable --progress $src $dst
+end
+
+# Dig w/ all info
+function digall --argument domain --description "Dig with all the info"
+  dig +nocmd $domain any +multiline +noall +answer
 end
 
 #custom rc, not in version control

@@ -1,3 +1,71 @@
 {
-    "workbench.colorTheme": "Monokai Dimmed"
+    "workbench.colorTheme": "Dracula Soft",
+    "breadcrumbs.enabled": true,
+    "css.validate": true,
+    "editor.fontFamily": "Sauce Code Pro, Audiowide, Hasklig, Overpass Mono, monospace",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modifications",
+    "editor.matchBrackets": false,
+    "editor.rulers": [
+        100
+    ],
+    "editor.tabSize": 4,
+    "editor.folding": false,
+    "files.trimFinalNewlines": true,
+    "git.allowForcePush": true,
+    "git.confirmForcePush": true,
+    "telemetry.enableTelemetry": false,
+    "terminal.integrated.scrollback": 50000,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "workbench.startupEditor": "readme",
+    "subtleBrackets.pairs": [
+        {
+            "open": "(",
+            "close": ")"
+        },
+        {
+            "open": "[",
+            "close": "]"
+        },
+        {
+            "open": "{",
+            "close": "}"
+        },
+        {
+            "open": "<",
+            "close": ">"
+        }
+    ],
+    "subtleBrackets.style": {
+        "borderColor": "yellow",
+        "borderWidth": "1px",
+        "borderStyle": "solid"
+    },
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "files.autoSave": "onWindowChange",
+    "telemetry.telemetryLevel": "off",
+    "window.menuBarVisibility": "visible",
+    "editor.formatOnSaveMode": "modifications",
+    "editor.minimap.enabled": true,
+    "svelte.enable-ts-plugin": true,
+    "editor.lineNumbers": "on",
+    "workbench.tree.indent": 26,
+    "workbench.tree.renderIndentGuides": "always",
+    "explorer.openEditors.visible": 0,
+    "breadcrumbs.enabled": true,
+    "telemetry.enableTelemetry": false,
+    "editor.matchBrackets": false,
+    "workbench.editor.showTabs": false,
+    "rust-analyzer.checkOnSave.enable": true,
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "stash-push:command",
+        "switch:command",
+        "branch-create:command"
+    ] 
 }

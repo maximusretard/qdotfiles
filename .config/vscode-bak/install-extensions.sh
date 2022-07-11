@@ -1,9 +1,33 @@
 #!/usr/bin/env bash
 
+code --install-extension actboy168.tasks
 code --install-extension bmewburn.vscode-intelephense-client
+code --install-extension bungcip.better-toml
+code --install-extension dnlytras.nord-wave
+code --install-extension dracula-theme.theme-dracula
+code --install-extension eamodio.gitlens
+code --install-extension gilescope.arrowdebugging
+code --install-extension gilescope.correctdefaults
+code --install-extension gilescope.cyberdyne20xx-rust-edition
+code --install-extension gilescope.rust-in-peace
+code --install-extension gilescope.rustpunk
+code --install-extension hbenl.vscode-test-explorer
+code --install-extension k--kato.intellij-idea-keybindings
 code --install-extension mads-hartmann.bash-ide-vscode
 code --install-extension matklad.rust-analyzer
 code --install-extension ms-python.python
 code --install-extension ms-python.vscode-pylance
 code --install-extension ms-toolsai.jupyter
 code --install-extension ms-toolsai.jupyter-keymap
+code --install-extension ms-toolsai.jupyter-renderers
+code --install-extension ms-vscode.test-adapter-converter
+code --install-extension nhoizey.gremlins
+code --install-extension rafamel.subtle-brackets
+code --install-extension serayuzgur.crates
+code --install-extension sidp.strict-whitespace
+code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension svelte.svelte-vscode
+code --install-extension Swellaby.vscode-rust-test-adapter
+code --install-extension usernamehw.errorlens
+code --install-extension vadimcn.vscode-lldb
+code --install-extension wayou.vscode-todo-highlight
