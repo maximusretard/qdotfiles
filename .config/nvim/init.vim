@@ -8,4 +8,6 @@ Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " vimrc
-source ~/.vimrc
+if filereadable(expand("~/.vimrc"))
+  source ~/.vimrc
+endif
