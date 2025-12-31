@@ -6,7 +6,7 @@ SETUVAR FZF_LEGACY_KEYBINDINGS:1
 SETUVAR FZF_PREVIEW_DIR_CMD:ls
 SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
 SETUVAR FZF_TMUX_HEIGHT:40\x25
-SETUVAR __fish_initialized:3400
+SETUVAR __fish_initialized:3800
 SETUVAR _fisher_jethrokuan_2F_fzf_files:/home/user/\x2econfig/fish/functions/__fzf_cd\x2efish\x1e/home/user/\x2econfig/fish/functions/__fzf_complete\x2efish\x1e/home/user/\x2econfig/fish/functions/__fzf_complete_preview\x2efish\x1e/home/user/\x2econfig/fish/functions/__fzf_find_file\x2efish\x1e/home/user/\x2econfig/fish/functions/__fzf_get_dir\x2efish\x1e/home/user/\x2econfig/fish/functions/__fzf_open\x2efish\x1e/home/user/\x2econfig/fish/functions/__fzf_parse_commandline\x2efish\x1e/home/user/\x2econfig/fish/functions/__fzf_reverse_isearch\x2efish\x1e/home/user/\x2econfig/fish/functions/__fzfcmd\x2efish\x1e/home/user/\x2econfig/fish/conf\x2ed/fzf\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/home/user/\x2econfig/fish/functions/fisher\x2efish\x1e/home/user/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejethrokuan/fzf
@@ -27,7 +27,7 @@ SETUVAR fish_color_operator:00a6b2
 SETUVAR fish_color_param:brcyan
 SETUVAR fish_color_quote:999900
 SETUVAR fish_color_redirection:00afff
-SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_search_match:white\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
